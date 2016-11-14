@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="CPP_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src/s3fnet.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/dmlprep/dmlpart.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/dmlprep/dmlenv.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/extra/getopt.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/extra/getopt.c" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/extra/getopt1.c" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/s3fnet.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/util/errhandle.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/util/trie.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/util/shstl.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/util/trie.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/util/tries/trie3.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/util/tries/triedata_array2.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/util/tries/triedata_array0.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/util/tries/triedata_array1.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/util/tries/triedata_array2.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/util/tries/triedata_array1.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/util/tries/trie1.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/util/tries/triedata_array0.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/util/tries/trie0.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/util/tries/trie0.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/util/tries/trie2.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/util/tries/trie3.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/util/tries/trie4.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/util/tries/trie1.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/util/tries/trie4.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/util/tries/trie2.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/util/errhandle.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/net/network_interface.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/net/route_caches/route_cache2.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/net/route_caches/route_cache2.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/net/route_caches/route_cache0.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/net/route_caches/route_cache1.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/net/route_caches/route_cache1.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/net/route_caches/route_cache0.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/net/cidr.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/net/traffic.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/net/forwardingtable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/net/nic_queue.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/net/ip_prefix.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/net/traffic.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/net/mac48_address.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/net/cidr.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/net/host.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/net/red_queue.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/net/mac48_address.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/net/forwardingtable.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/net/droptail_queue.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/net/nhi.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/net/ip_prefix.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/net/link.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/net/dmlobj.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/net/host.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/net/droptail_queue.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/net/net.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/net/nhi.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/net/nic_queue.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/net/dmlobj.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/net/net.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/net/network_interface.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/net/link.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/net/red_queue.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/socket/nb_socket_master.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/socket/nb_socket_master.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/socket/socket_session.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/socket/socket_master.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/socket/socket_master.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/udp/udp_master.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/udp/udp_message.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/udp/udp_master.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/udp/udp_message.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/udp/udp_session.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/udp/app/udp_client.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/udp/app/udp_server.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/udp/app/udp_client.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/udp/app/udp_server.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/udp/udp_session.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/ipv4/ip_message.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/ipv4/ip_session.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/ipv4/ip_message.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/ipv4/ip_interface.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/ipv4/ip_session.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/simple_mac/simple_mac_message.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/simple_mac/simple_mac.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/simple_mac/simple_mac.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/simple_mac/simple_mac_message.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/simple_phy/simple_phy.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/simple_phy/simple_phy.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/tcp/tcp_message.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/tcp/tcp_blocks.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/tcp/tcp_seqwnd.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/tcp/tcp_master.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/tcp/tcp_rcvwnd.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/tcp/tcp_message.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/tcp/tcp_state.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/tcp/tcp_receiver.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/tcp/app/nb_tcp_server.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/tcp/app/OLD_tcp_server.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/tcp/app/tcp_client.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/tcp/app/nb_tcp_server.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/tcp/app/OLD_tcp_client.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/tcp/app/nb_tcp_client.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/tcp/app/dnp_client.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/tcp/app/tcp_client.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/tcp/app/blocking_tcp_client.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/tcp/app/dnp_server.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/tcp/app/nb_tcp_client.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/tcp/app/tcp_server.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/tcp/app/blocking_tcp_client.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/tcp/app/tcp_server.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/tcp/tcp_master.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/tcp/tcp_blocks.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/tcp/tcp_session.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/tcp/tcp_sndwnd.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/tcp/tcp_sender.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/tcp/tcp_sndwnd.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/tcp/tcp_rcvwnd.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/tcp/tcp_sack.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/tcp/tcp_session.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/tcp/tcp_init.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/tcp/tcp_timer.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/base/protocol_message.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/base/nic_protocol_session.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/base/protocol_message.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/base/data_message.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/base/protocol_session.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/base/nic_protocol_session.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/base/protocols.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/base/protocol_session.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/base/protocol_graph.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/base/lowest_protocol_session.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/base/protocols.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/base/data_message.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/base/lowest_protocol_session.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/base/protocol_graph.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/dummy/dummy_message.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/dummy/dummy_message.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/dummy/dummy_session.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/os/dummy/dummy_session.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/env/namesvc.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/env/namesvc.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
+    </content>
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="Header Search Paths">
+        <CLASSES>
+          <root url="file:///usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
+          <root url="file:///usr/lib/gcc/x86_64-linux-gnu/5/include" />
+          <root url="file:///usr/include" />
+          <root url="file:///usr/local/include" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file:///usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
+          <root url="file:///usr/lib/gcc/x86_64-linux-gnu/5/include" />
+          <root url="file:///usr/include" />
+          <root url="file:///usr/local/include" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+  </component>
+</module>

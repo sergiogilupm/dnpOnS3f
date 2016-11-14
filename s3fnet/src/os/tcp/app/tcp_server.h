@@ -60,11 +60,16 @@ class TCPServerSession: public ProtocolSession {
    */
   Process* start_timer_callback_proc;
 
+  Process* start_polling_timer_proc;
+
   /**
   * The callback function registered with the start_timer_callback_proc
   */
   void start_timer_callback(Activation ac);
 
+  void polling_phase(Activation ac);
+
+  void start_polling_timer();
   /**
   * Activation object for start timer callback.
   * Stores the data for the callback function. In this case, the

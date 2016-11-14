@@ -12,7 +12,11 @@
 #include "net/host.h"
 #include "net/network_interface.h"
 #include "os/base/protocols.h"
+#include "json.hpp"
 
+// for convenience
+using json = nlohmann::json;
+#define TCP_DEBUG
 
 #ifdef TCP_DEBUG
 #define TCP_DUMP(x) printf("TCPSVR: "); x
@@ -22,10 +26,50 @@
 
 #define DEFAULT_SERVER_PORT 10
 
+
+
 namespace s3f {
 namespace s3fnet {
 
 S3FNET_REGISTER_PROTOCOL(TCPServerSession, "S3F.OS.TCP.test.TCPServer");
+
+
+class InternalData {
+	private :
+		int lights = 0;
+		float temperature = 12.3;
+		int windows = 1;
+
+	public:
+		int getLights() {
+			return lights;
+		}
+
+		float getTemperature() {
+			return temperature;
+		}
+
+		int getWindows() {
+			return windows;
+		}
+
+		void setLights(int newLights) {
+			lights = newLights;
+		}
+
+		void setTemperature(float newTemperature) {
+			temperature = newTemperature;
+		}
+
+		void setWindows(int newWindows) {
+			windows = newWindows;
+		}
+};
+
+InternalData internalData;
+
+json j;
+std::string s;
 
 /** The continuation used in tcp server. */
 class TCPServerSessionContinuation : public BSocketContinuation {
@@ -35,8 +79,15 @@ class TCPServerSessionContinuation : public BSocketContinuation {
     TCP_SERVER_SESSION_ACCEPTING   = 1,
     TCP_SERVER_SESSION_RECEIVING   = 2,
     TCP_SERVER_SESSION_SENDING     = 3,
-    TCP_SERVER_SESSION_CLOSING     = 4
+    TCP_SERVER_SESSION_CLOSING     = 4,
+    TCP_SERVER_INACTIVE 	   = 5,
+    TCP_SERVER_POLLING 		   = 6,
+    TCP_SERVER_SENDINGREQ 	   = 7
   };
+
+	// TCP_SERVER_INACTIVE
+	// TCP_SERVER_POLLING
+	// TCP_SERVER_SENDING_REQ
 
   /** the constructor */
   TCPServerSessionContinuation(TCPServerSession* server, int ssock) :
@@ -139,6 +190,33 @@ class TCPServerSessionContinuation : public BSocketContinuation {
   int sent_bytes; ///< number of bytes already sent
 };
 
+float get_random_temp()
+{
+	return 12.0;
+}
+
+int get_random_windows()
+{
+	return 1;
+}
+
+int get_random_light()
+{
+	return rand() % 20;
+}
+
+void gather_env_data()
+{
+	j["temperature"] = get_random_temp();
+	j["windows"] = get_random_windows();
+	j["light"] = get_random_light();
+}
+
+void delete_env_data()
+{
+	j.clear();
+}
+
 TCPServerSession::TCPServerSession(ProtocolGraph* graph) :
   ProtocolSession(graph), accept_completed(true), start_timer_ac(0), start_timer_callback_proc(0)
 {
@@ -223,6 +301,9 @@ void TCPServerSession::init()
 
 void TCPServerSession::start_on()
 {
+  
+  
+
   TCP_DUMP(printf("[host=\"%s\"] %s: main_proc(), starting server.\n",
 		  inHost()->nhi.toString(), getNowWithThousandSeparator()));
 
@@ -242,7 +323,7 @@ void TCPServerSession::start_on()
 
 	  TCP_DUMP(printf("[host=\"%s\"] %s: waiting for incoming connection on socket %d.\n",
 			  inHost()->nhi.toString(), getNowWithThousandSeparator(), ssock));
-
+	  start_polling_timer();
 	  handle_client(ssock); //call accept
   }
 }
@@ -250,8 +331,8 @@ void TCPServerSession::start_on()
 void TCPServerSession::handle_client(int ssock)
 {
   TCPServerSessionContinuation* cnt = new TCPServerSessionContinuation(this, ssock);
-  cnt->status = TCPServerSessionContinuation::TCP_SERVER_SESSION_ACCEPTING;
-  sm->accept(ssock, true, cnt, 0);
+  cnt->status = TCPServerSessionContinuation::TCP_SERVER_SESSION_ACCEPTING; // Inactive
+  sm->accept(ssock, true, cnt, 0); // Requests
 }
 
 
@@ -275,6 +356,9 @@ void TCPServerSession::request_received(TCPServerSessionContinuation* const cnt)
   assert(cnt->retval == (int)request_size);
 
   cnt->file_size = ntohl(*(uint32*)cnt->reqbuf);
+  gather_env_data();
+  s = j.dump();
+  //cnt->file_size = ntohl(*(uint32*)sizeof(s));
   TCP_DUMP(printf("[host=\"%s\"] %s: session_proc(), socket %d received request "
 		  "(request_size=%u, file_size=%u).\n",
 		  inHost()->nhi.toString(), getNowWithThousandSeparator(),
@@ -347,6 +431,30 @@ void TCPServerSession::start_timer_callback(Activation ac)
   TCPServerSession* server = (TCPServerSession*)((ProtocolCallbackActivation*)ac)->session;
   server->start_on();
 }
+
+void TCPServerSession::start_polling_timer()
+{
+  Host* owner_host = inHost();
+  start_polling_timer_proc = new Process( (Entity *)owner_host, (void (s3f::Entity::*)(s3f::Activation))&TCPServerSession::polling_phase);
+  start_timer_ac = new ProtocolCallbackActivation(this);
+  Activation ac (start_timer_ac);
+  HandleCode h = inHost()->waitFor( start_polling_timer_proc, ac, 2, inHost()->tie_breaking_seed );
+}
+
+void TCPServerSession::polling_phase(Activation ac)
+{
+
+  TCP_DUMP(printf("********************POLLING\n"));
+std::cout << j.dump(4) << std::endl;
+  TCP_DUMP(printf("*** lights:%i, temp: %f, windows: %i\n", internalData.getLights(), internalData.getTemperature(), internalData.getWindows()));
+  internalData.setLights(1);
+  internalData.setTemperature(24.34);
+  internalData.setWindows(0);
+  TCP_DUMP(printf("*** lights:%i, temp: %f, windows: %i\n", internalData.getLights(), internalData.getTemperature(), internalData.getWindows()));
+  TCPServerSession* server = (TCPServerSession*)((ProtocolCallbackActivation*)ac)->session;
+ HandleCode h = inHost()->waitFor( start_polling_timer_proc, ac, 2, inHost()->tie_breaking_seed );
+}
+
 
 }; // namespace s3fnet
 }; // namespace s3f

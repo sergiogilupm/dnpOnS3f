@@ -21,10 +21,10 @@ dmlpart: $(DMLPART_OBJECTS) $(EXTRA_OBJECTS)
 
 # This is how to compile the source code that does not require instrumentation.
 .cc.o:
-	$(CXX) $(S3FNET_INCLUDES) $(S3FNET_CFLAGS) -o $@ -c $<
+	$(CXX) $(S3FNET_INCLUDES) $(S3FNET_CFLAGS) -std=gnu++11 -o $@ -c $<
 
 .c.o:
-	$(CC) $(S3FNET_INCLUDES) $(S3FNET_CFLAGS) -o $@ -c $<
+	$(CC) $(S3FNET_INCLUDES) $(S3FNET_CFLAGS) -std=gnu++11 -o $@ -c $<
 
 # This is how to compile the source files for dmlenv utility.
 %.env.o:	%.cc $(DMLENV_HDRFILES) $(DMLENV_SRCFILES)

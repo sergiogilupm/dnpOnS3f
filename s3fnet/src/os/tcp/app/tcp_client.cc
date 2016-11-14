@@ -15,6 +15,8 @@
 #include "net/traffic.h"
 #include "env/namesvc.h"
 
+//#define TCP_DEBUG
+
 #ifdef TCP_DEBUG
 #define TCP_DUMP(x) printf("TCPCLT: "); x
 #else
@@ -28,6 +30,7 @@ namespace s3f {
 namespace s3fnet {
 
 S3FNET_REGISTER_PROTOCOL(TCPClientSession, "S3F.OS.TCP.test.TCPClient");
+
 
 /** The continuation used in TCP client. */
 class TCPClientSessionContinuation : public BSocketContinuation {
